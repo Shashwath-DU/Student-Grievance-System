@@ -1,0 +1,199 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-size:cover;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUptIiIJu_Fx_M4w6F--lNkxt7UcMy1LnKD2Ds62eb4JR-5-CJgRohIkRRB7GxM3i65Sg&usqp=CAU");
+    background-repeat: no-repeat;
+}
+
+.selectbox{
+    width: 600px;
+    height: 300px;
+    top: 30%;
+    left: 40%;
+    color:#fff;
+    position: absolute;
+    box-sizing: border-box;
+    outline: #022e11;
+    border-color: #022e11;
+}
+
+.objbox{
+    padding: 10px;
+    width: 500px;
+    height: 225px;
+    top: 30%;
+    left: 3%;
+    font-size: large;
+    color:#070000;
+    position: absolute;
+    box-sizing: border-box;
+    background-color: #36a5b4;
+    border-color: #022e11;
+    outline: #022e11;
+}
+
+.objbox:hover{
+    background-color: bisque;
+    transition: 1s;
+}
+
+.funbox{
+    padding: 10px;
+    width: 500px;
+    height: 225px;
+    top: 60%;
+    left: 3%;
+    font-size: large;
+    color:#070000;
+    position: absolute;
+    box-sizing: border-box;
+    background-color: #36a5b4;
+    border-color: #022e11;
+    outline: #022e11;
+}
+
+.funbox:hover{
+    background-color: bisque;
+    transition: 1s;
+}
+
+.profile-card{
+    /* padding: 10px; */
+    width: 500px;
+    height: 600px;
+    top: 25%;
+    left: 2%;
+    font-size: larger;
+    color:#070000;
+    position: absolute;
+    box-sizing: border-box;
+    background:transparent;
+    border-color: #022e11;  
+    outline: #022e11;
+}
+
+.profile-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* text-align: center; */
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.profile-card:hover .profile-card-inner {
+  transform: rotateY(180deg);
+}
+
+.profile-card-front, .profile-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.profile-card-front {
+  background-color: #052b30be;
+  color:rgb(41, 158, 204);
+  text-align: center;
+}
+
+.profile-card-front-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.profile-card-front-image img{
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+}
+
+.profile-card-back-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.profile-card-back-image img{
+  border-radius: 50%;
+  width: 300px;
+  height: 250px;
+}
+
+.profile-card-back {
+  background-color: #052b30be;
+  color: white;
+  transform: rotateY(180deg);
+  font-size: larger;
+}
+
+.profilebox:hover{
+    background-color: bisque;
+    transition: 1s;
+}
+
+h1{
+    text-align: center;
+    font-size: 70px;
+    color: rgb(49, 216, 202);
+}
+
+.selectbox input{
+    width: 70%;
+    margin-bottom: 40px;
+}
+
+.selectbox input[type="text"]{
+    border: none;
+    background: none;
+    height: 80px;
+    border-bottom: 1px solid #130101;
+    color:#fff;
+    font-size: 20px;
+}
+
+.selectbox input[type="submit"]{
+    border: none;
+    outline: none;
+    font-size: 18px;
+    height: 40px;
+    color: #fff;
+    background: #052b30be;
+    border-radius: 20px;
+    width: 20%;
+    margin-top: 20px;
+    margin-left: 120px;
+}
+
+.selectbox textarea{
+    border-color: #05441a;
+    background-color: #052b30be;
+    color: #fff;
+} 
+
+.buttons {
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    display: inline;
+    left: 40%;
+    top: 20%;
+}
+
+table,th,td{
+  border: 2px solid;
+  color:black;
+  font-style: bold;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 5px 20px;
+}

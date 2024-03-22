@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grievance System</title>
+    <link rel="stylesheet" type="text/css" href="studentlogin.css">
+</head>
+<body>
+    <h1 style="color: rgb(3, 41, 23);">STUDENT GRIEVANCE SYSTEM</h1>
+    <div class="loginbox">
+        <h1>Student Login</h1>
+        <form style="margin-left: 20%;" method="POST" onsubmit="return loginUser(event)" >
+            <input type="text" placeholder="Enter Username" name="login-name" required><br>
+            <input type="password" placeholder="Enter Password" name="login-password" required><br>
+            <input type="submit" value="Login"><br><br>
+            <a href="studentsignup.html" target="_blank">Don't have an account?....Sign Up</a>
+        </form>
+    </div>
+    <script src="./Scripts.js"></script>
+</body>
+</html>

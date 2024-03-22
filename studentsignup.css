@@ -1,0 +1,70 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-size:auto;
+    background-image: url("https://wyrz.org/wp-content/uploads/2016/03/Graduate.jpg");
+    background-repeat: no-repeat;
+}
+
+.signupbox{
+    width: 500px;
+    height: 800px;
+    top: 10%;
+    left: 3.5%;
+    background-color: #04263a;
+    color: #fff;
+    position: absolute;
+    box-sizing: border-box;
+    outline: #022e11;
+    border-color: #022e11;
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(12, 128, 136);
+}
+
+.signup input{
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.signupbox input[type="text"], input[type="password"],input[type="email"]{
+    border: none;
+    background: none;
+    height: 80px;
+    border-bottom: 1px solid #fcf8f8;
+    color:rgba(169, 169, 169, 0.788);
+    font-size: 20px;
+}
+
+.signupbox input[type="date"]{
+    border: none;
+    background: none;
+    height: 80px;
+    border-bottom: 1px solid #130101;
+    color:darkgray;
+    font-size: 20px;
+}
+
+.signupbox label{
+    border: none;
+    background: none;
+    height: 80px;
+    border-bottom: 1px solid #fcf8f8;
+    color:darkgray;
+    font-size: 20px;
+}
+
+.signupbox input[type="submit"]{
+    border: none;
+    outline: none;
+    font-size: 18px;
+    height: 40px;
+    color: #fff;
+    background: #05441a;
+    border-radius: 20px;
+    width: 60%;
+    margin-top: 20px;
+}

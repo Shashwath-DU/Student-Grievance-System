@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<link rel="stylesheet" type="text/css" href="admindashboard.css">
+
+<body onload="auserProfile()">
+<h1 style="margin-top: 10px;">Admin Dashboard</h1>
+  <div class="profile-card">
+    <div class="profile-card-inner">
+      <div class="profile-card-front">
+        <h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Welcome to your dashboard!!</h2>
+        <div class="profile-card-front-image">
+          <img src="https://i.pinimg.com/originals/b6/4f/8f/b64f8fcf0e0aed9537c800eb5e9ca1ed.png">
+        </div>
+      </div>
+      <div class="profile-card-back">
+        <form>
+          <h2 style="text-align: center;color:rgb(41, 158, 204);">Profile</h2>
+          <div style="margin-top: 20px;margin-left: 20px;color:rgb(41, 158, 204);">
+            <span>Username : </span>
+            <label id="profile-ausername" ></label>
+          </div>
+          <div style="margin-top: 10px;margin-left: 20px;color:rgb(41, 158, 204);">
+            <span>Post : </span>
+            <label id="profile-apost" ></label>
+          </div>
+          <div style="margin-top: 10px;margin-left: 20px;color:rgb(41, 158, 204);">
+            <span>email : </span>
+            <label id="profile-aemail" ></label>
+          </div>
+          <div style="margin-top: 10px;margin-left: 20px;color:rgb(41, 158, 204);">
+            <span>phone_number : </span>
+            <label id="profile-aphone" ></label>
+          </div>
+          <div style="margin-top: 10px;margin-left: 20px;color:rgb(41, 158, 204);">
+            <span>dob : </span>
+            <label id="profile-adob" ></label>
+          </div>
+        </form>
+        <div class="profile-card-back-image">
+          <img src="https://banner2.cleanpng.com/20180426/jhw/kisspng-computer-icons-user-profile-avatar-5ae1cada2070a0.6021195015247469701329.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+  <table style="margin-left: 40%;width: 50%; color: aliceblue;">
+    <thead>
+        <tr>
+            <th>USN</th>
+            <th>Subject</th>
+            <th>Complaint</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody id="acomplaints-body"></tbody>
+  <script src="./Scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="studentdashboard.css">
+</head>
+
+<body onload="userProfile()">
+  <button onclick="openNav()"
+    style="margin-left: 30px;margin-top:30px;color:rgb(49, 216, 202);background-color: darkslategrey;padding: 20px;">MENU</button>
+  <h1 style="margin-top: 10px;">Student Dashboard</h1>
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="aboutdesk.html">About</a>
+      <a href="studcomplainthis.html">Complaint History</a>
+    </div>
+
+  </div>
+
+  <div class="profile-card">
+    <div class="profile-card-inner">
+      <div class="profile-card-front">
+        <h2>Welcome to your dashboard!!</h2>
+        <div class="profile-card-front-image">
+          <img src="https://i.pinimg.com/originals/b6/4f/8f/b64f8fcf0e0aed9537c800eb5e9ca1ed.png">
+        </div>
+      </div>
+      <div class="profile-card-back">
+        <form method="post">
+          <h2 style="text-align: center;color:rgb(41, 158, 204);">Profile</h2>
+          <div>
+            <span>Username : </span>
+            <label id="profile-username"></label>
+          </div>
+          <div>
+            <span>usn : </span>
+            <label id="profile-usn"></label>
+          </div>
+          <div>
+            <span>email : </span>
+            <label id="profile-email"></label>
+          </div>
+          <div>
+            <span>phone_number : </span>
+            <label id="profile-phone"></label>
+          </div>
+          <div>
+            <span>dob : </span>
+            <label id="profile-dob"></label>
+          </div>
+          <div>
+            <span>branch : </span>
+            <label id="profile-branch"></label>
+          </div>
+          <div>
+            <span>semester : </span>
+            <label id="profile-sem"></label>
+          </div>
+        </form>
+        <div class="profile-card-back-image">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToJfRoAm-Jp_bTRBEKJR7J_sveHKR40wu-m2ndJoa3svFWmBa0pe9gEdQAQRzXNTo5lt8&usqp=CAU">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="selectbox">
+    <form method="post" onsubmit="uploadingcomplaint(event)">
+      <label for="subject">Enter subject</label><br>
+      <textarea name="complaint-sub" rows="2" cols="50" required></textarea><br><br>
+      <label for="complaint">Enter Grievance</label><br>
+      <textarea name="complaint-com" rows="10" cols="50" required></textarea><br>
+      <input type="submit" value="submit" name=""><br>
+    </form>
+  </div>
+  <script src="./Scripts.js"></script>
+</body>
+
+</html>

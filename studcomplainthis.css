@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-size:cover;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUptIiIJu_Fx_M4w6F--lNkxt7UcMy1LnKD2Ds62eb4JR-5-CJgRohIkRRB7GxM3i65Sg&usqp=CAU");
+    background-repeat: no-repeat;
+}
+
+h1{
+    text-align: center;
+    font-size: 70px;
+    color: rgb(49, 216, 202);
+}
+
+
+table,th,td{
+    border: 2px solid;
+    color: black;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 5px 20px;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<link rel="stylesheet" type="text/css" href="teacherdashboard.css">
+
+<body onload="tuserProfile()">
+  <h1 style="margin-top: 10px;">Teacher Dashboard</h1>
+  <div class="profile-card">
+    <div class="profile-card-inner">
+      <div class="profile-card-front">
+        <h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Welcome to your dashboard!!
+        </h2>
+        <div class="profile-card-front-image">
+          <img src="https://i.pinimg.com/originals/b6/4f/8f/b64f8fcf0e0aed9537c800eb5e9ca1ed.png">
+        </div>
+      </div>
+      <div class="profile-card-back">
+        <form>
+          <h2 style="text-align: center;color:rgb(41, 158, 204);">Profile</h2>
+          <div style="margin-top: 20px;margin-left: 20px;color:rgb(41, 158, 204);">
+            <span>Username : </span>
+            <label id="profile-tusername"></label>
+          </div>
+          <div style="margin-top: 10px;margin-left: 20px;color:rgb(41, 158, 204);">
+            <span>Post : </span>
+            <label id="profile-tpost"></label>
+          </div>
+          <div style="margin-top: 10px;margin-left: 20px;color:rgb(41, 158, 204);">
+            <span>email : </span>
+            <label id="profile-temail"></label>
+          </div>
+          <div style="margin-top: 10px;margin-left: 20px;color:rgb(41, 158, 204);">
+            <span>phone_number : </span>
+            <label id="profile-tphone"></label>
+          </div>
+          <div style="margin-top: 10px;margin-left: 20px;color:rgb(41, 158, 204);">
+            <span>dob : </span>
+            <label id="profile-tdob"></label>
+          </div>
+          <div style="margin-top: 10px;margin-left: 20px;color:rgb(41, 158, 204);">
+            <span>branch : </span>
+            <label id="profile-tbranch"></label>
+          </div>
+        </form>
+        <div class="profile-card-back-image">
+          <img src="https://png.pngtree.com/element_pic/17/01/01/f746eaac9809159f5d1c2f5149190263.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+  <table style="margin-left: 40%;width: 50%; color: aliceblue;">
+    <thead>
+      <tr>
+        <th>Subject</th>
+        <th>Complaint</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody id="complaints-body"></tbody>
+    <script>
+      async function tuserProfile() {
+        const username = document.getElementById("profile-tusername");
+        const post = document.getElementById("profile-tpost");
+        const email = document.getElementById("profile-temail");
+        const phone_number = document.getElementById("profile-tphone");
+        const date_of_birth = document.getElementById("profile-tdob");
+        const branch = document.getElementById("profile-tbranch");
+        var user = localStorage.getItem('user');
+
+        const response = await fetch('http://localhost:3000/api/tuserprofile', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            user: user
+          }),
+        });
+
+        const data = await response.json();
+        const uData = data.user;
+        if (response.status === 200) {
+          username.innerHTML = uData.username;
+          post.innerHTML = uData.post;
+          email.innerHTML = uData.email;
+          phone_number.innerHTML = uData.phone_number;
+          var isoDateString = uData.date_of_birth.replace("T", " ").replace("Z", "");
+          const [year, month, day, hour, minute, second] = isoDateString.split(/[- :]/);
+          const jsDate = new Date(year, month - 1, day - 1, hour, minute, second);
+          date_of_birth.innerHTML = jsDate.toLocaleDateString();
+          branch.innerHTML = uData.branch;
+
+          const complaintsBody = document.getElementById('complaints-body');
+          const response = await fetch('http://localhost:3000/api/tgetcomplaints', {
+            method: 'POST', 
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              teacherBranch: uData.branch
+            }),
+          });
+
+          const resp = await response.json();
+          let html = '';
+          resp.complaints?.forEach(element => {
+            html += `<tr><td>${element.subject}</td><td>${element.complaint}</td><td>${element.D_a_t_e}</td></tr>`;
+          });
+          complaintsBody.innerHTML = html;
+        }
+      }
+
+      tuserProfile()
+    </script>
+</body>
+
+</html>

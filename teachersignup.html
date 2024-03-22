@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grievance System</title>
+    <link rel="stylesheet" type="text/css" href="teachersignup.css">
+</head>
+<body>
+    <h1 style="color: rgb(3, 41, 23);">STUDENT GRIEVANCE SYSTEM</h1>
+    <div class="signupbox">
+        <h1>Teacher Signup</h1>
+        <form style="margin-left: 20%;" method="POST" onsubmit="return tsignupUser(event)" >
+            <input type="text" placeholder="Enter Username" id="tsignup-name" required><br>
+            <input type="password" placeholder="Enter Password" id="tsignup-password" required><br>
+            <input type="text" placeholder="Enter post" id="tsignup-post" required><br>
+            <input type="email" placeholder="Enter email" id="tsignup-email" required><br>
+            <input type="text" placeholder="Enter phone_number" id="tsignup-num" required><br>
+            <input type="date" placeholder="Enter dob" id="tsignup-dob" required><br><br>
+            <label for="department">Department:</label>
+            <select id="tsignup-dep" required>
+                <option>-</option>
+                <option>ISE</option>
+                <option>CSE</option>
+                <option>EEE</option>
+                <option>ECE</option>
+                <option>AIML</option>
+                <option>ME</option>
+            </select><br><br>
+            <input type="submit" value="Signup"><br><br>
+        </form>
+    </div>
+    <script src="./Scripts.js"></script>
+</body>
+</html>

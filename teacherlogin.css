@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-size:cover;
+    background-image: url("https://www.fluidimaging.com/hubfs/images/website/resource-table/AdobeStock_405284706-remote-learning-illustration.jpg");
+    background-repeat: no-repeat;
+}
+
+.loginbox{
+    width: 500px;
+    height: 500px;
+    top: 22%;
+    left: 3.5%;
+    background-color: #074049;
+    color:#fff;
+    position: absolute;
+    box-sizing: border-box;
+    outline: #022e11;
+    border-color: #022e11;
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(3, 148, 158);
+}
+
+.login input{
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.loginbox input[type="text"], input[type="password"]{
+    border: none;
+    background: none;
+    height: 80px;
+    border-bottom: 1px solid #130101;
+    color:#fff;
+    font-size: 20px;
+}
+
+.loginbox input[type="submit"]{
+    border: none;
+    outline: none;
+    font-size: 18px;
+    height: 40px;
+    color: #fff;
+    background: #05441a;
+    border-radius: 20px;
+    width: 60%;
+    margin-top: 40px;
+}

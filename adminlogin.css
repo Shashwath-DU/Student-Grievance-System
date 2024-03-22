@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-size:cover;
+    background-image: url("https://dhamzv23wqk2g.cloudfront.net/wp-content/uploads/2023/12/13114731/cybersecurity-awareness.jpg");
+    background-repeat: no-repeat;
+}
+
+.loginbox{
+    width: 500px;
+    height: 500px;
+    top: 22%;
+    left: 60%;
+    background:transparent;
+    /* background-color: #021b1f; */
+    color:#0d8eca;
+    position: absolute;
+    box-sizing: border-box;
+    /* transform: translate(-20%,-100%); */
+    /* outline: #022e11;
+    border-color: #022e11; */
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(1, 12, 7);
+}
+
+.login input{
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.loginbox input[type="text"], input[type="password"]{
+    border: none;
+    background: none;
+    height: 80px;
+    border-bottom: 1px solid #130101;
+    color:#fff;
+    font-size: 20px;
+}
+
+button[type="submit"]{
+    border:none;
+    cursor: pointer;
+    font-size: 18px;
+    height: 40px;
+    color: #fff;
+    background-color:rgb(3, 63, 12);
+    border-radius: 20px;
+    width: 60%;
+    margin-top: 40px;
+
+}
+
+.loginbox input[type="checkbox"]{
+    color: #0d8eca;
+    background-color: aqua;
+}
+
+button :hover{
+    opacity: 0.8;
+}
